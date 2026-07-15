@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useContactForm } from '@/composables/useContactForm'
+import { useContactForm, getCountry } from '@/composables/useContactForm'
 
 const { form, errors, status, countries, submit, reset, formattedPhone } = useContactForm()
 
 function onPhoneInput(e: Event) {
   const target = e.target as HTMLInputElement
   // берём из введённого текста только цифры, ограничивая длиной под текущую страну
-  const maxDigits = countries[form.countryIndex].digits
+  const maxDigits = getCountry(form.countryIndex).digits
   const rawDigits = target.value.replace(/\D/g, '').slice(0, maxDigits)
   form.phone = rawDigits
 }

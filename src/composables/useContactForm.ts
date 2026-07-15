@@ -18,6 +18,9 @@ export const countries: Country[] = [
   { name: 'Украина', code: '+380', iso: 'UA', digits: 9, groups: [2, 3, 2, 2] },
   { name: 'Беларусь', code: '+375', iso: 'BY', digits: 9, groups: [2, 3, 2, 2] },
 ]
+export function getCountry(index: number): Country {
+  return countries[index] ?? countries[0]!
+}
 
 // ЗАМЕНИТЕ на вашу ссылку из Google Apps Script
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwLFAiax0NMI1vHbMFoVp3dDKnr3WOQWDZJnOoV3vhuzfgg-_5NhrNtzGKRLVDL14Kd/exec'
@@ -69,9 +72,9 @@ export function useContactForm() {
 
   const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
-  const formattedPhone = computed(() =>
-    formatPhoneDigits(form.phone, countries[form.countryIndex].groups)
-  )
+const formattedPhone = computed(() =>
+  formatPhoneDigits(form.phone, getCountry(form.countryIndex).groups)
+)
 
   function validate(): boolean {
     errors.name = ''
@@ -94,12 +97,12 @@ export function useContactForm() {
       errors.email = 'Введите корректный email'
     }
 
-    const country = countries[form.countryIndex]
-    const digitsOnly = form.phone.replace(/\D/g, '')
+    const country = getCountry(form.countryIndex)
+  const digitsOnly = form.phone.replace(/\D/g, '')
+
     if (digitsOnly.length !== country.digits) {
       errors.phone = `Номер для ${country.name} должен содержать ${country.digits} цифр`
     }
-
     return !errors.name && !errors.city && !errors.email && !errors.phone
   }
 
@@ -123,7 +126,7 @@ export function useContactForm() {
 
     status.value = 'submitting'
 
-    const country = countries[form.countryIndex]
+   const country = getCountry(form.countryIndex)
     const digitsOnly = form.phone.replace(/\D/g, '')
 
     const payload = {
