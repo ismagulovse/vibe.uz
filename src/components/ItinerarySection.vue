@@ -316,7 +316,7 @@ function toggle(i: number) {
   border: none;
   border-radius: 50%;
   background: var(--color-white);
-  color: var(black);
+   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
