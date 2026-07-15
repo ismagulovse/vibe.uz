@@ -6,8 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Repo is served from https://ismagulovse.github.io/webcamp/ on GitHub Pages
-  base: '/webcamp/',
+  // Repo is served from https://ismagulovse.github.io/vibe.uz/ on GitHub Pages
+  base: '/vibe.uz/',
   plugins: [
     vue(),
     vueDevTools(),
