@@ -14,7 +14,8 @@ const PX_PER_SECOND = 38 // <-- меняешь только это число, �
 function splitIntoColumns(items: string[], count: number) {
   const result: string[][] = Array.from({ length: count }, () => [])
   items.forEach((item, index) => {
-    result[index % count].push(item)
+    const column = result[index % count]
+    if (column) column.push(item)
   })
   return result
 }

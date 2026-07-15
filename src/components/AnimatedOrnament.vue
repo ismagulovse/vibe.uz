@@ -13,7 +13,9 @@ const props = defineProps<{
 
 const wrapperRef = ref<HTMLElement | null>(null)
 
-const initialTransforms: Record<string, string> = {
+type OrnamentAnimation = 'scale' | 'up' | 'rotate' | 'left' | 'right'
+
+const initialTransforms: Record<OrnamentAnimation, string> = {
   scale: 'scale(0.6)',
   up: 'translateY(28px) scale(0.9)',
   rotate: 'rotate(-16deg) scale(0.85)',
