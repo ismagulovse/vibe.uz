@@ -1,0 +1,42 @@
+/* Подключение локальных шрифтов. Italic получается стилем font-style: italic. */
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-v4020-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-v4020-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-v4020-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-v4020-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Рукописный шрифт для редких вставок */
+@font-face {
+  font-family: 'Gogol';
+  src: url('./fonts/gogol_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

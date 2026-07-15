@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import ContactSection from '@/components/ContactSection.vue';
+
+// Здесь будут блоки лендинга теннисного кемпа
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <main></main>
+  <ContactSection/>
 </template>
