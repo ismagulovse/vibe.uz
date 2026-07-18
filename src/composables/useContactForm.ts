@@ -20,7 +20,7 @@ export const countries: Country[] = [
 ]
 export function getCountry(index: number): Country {
   return countries[index] ?? countries[0]!
-}
+} 
 
 // ЗАМЕНИТЕ на вашу ссылку из Google Apps Script
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwLFAiax0NMI1vHbMFoVp3dDKnr3WOQWDZJnOoV3vhuzfgg-_5NhrNtzGKRLVDL14Kd/exec'

@@ -4,6 +4,7 @@ import olgaPhoto from '@/assets/coaches/olga.jpg'
 import vladPhoto from '@/assets/coaches/vlad.jpg'
 import denPhoto from '@/assets/coaches/den.jpg'
 import mariyaPhoto from '@/assets/coaches/mariya.jpg'
+import olgaPhoto2 from '@/assets/coaches/olga2.jpg'
 
 interface DescPart {
   text: string
@@ -28,7 +29,7 @@ const coaches: Coach[] = [
   },
   {
     name: 'Столярова Ольга',
-    photo: 'https://placehold.co/300x300/c74d36/f5f5f5?text=Ольга+С.',
+    photo: olgaPhoto2,
     description: [
       { text: 'Тренер по ' },
       { text: 'функциональной йоге', highlight: true },
