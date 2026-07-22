@@ -7,9 +7,9 @@
     </nav>
 
     <div class="app-header__logos">
-      <img :src="logoTP" alt="Логотип компании 1" class="app-header__logo app-header__logo--tp" />
-      <span class="app-header__cross">×</span>
       <img :src="logoVibe" alt="Логотип компании 2" class="app-header__logo app-header__logo--vibe"/>
+      <span class="app-header__cross">×</span>
+      <img :src="logoTP" alt="Логотип компании 1" class="app-header__logo app-header__logo--tp" />
     </div>
 
     <nav class="app-header__nav app-header__nav--right" aria-label="Навигация справа">
