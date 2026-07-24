@@ -2,18 +2,18 @@
   <header class="app-header":class="{ 'app-header--scrolled': isScrolled }">
     <nav class="app-header__nav app-header__nav--left" aria-label="Навигация слева">
       <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-1')">Главная</a>
-      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-2')">Для кого?</a>
-      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-3')">План</a>
+      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-2')">Как это было?</a>
     </nav>
-
+    
     <div class="app-header__logos">
       <img :src="logoVibe" alt="Логотип компании 2" class="app-header__logo app-header__logo--vibe"/>
       <span class="app-header__cross">×</span>
       <img :src="logoTP" alt="Логотип компании 1" class="app-header__logo app-header__logo--tp" />
     </div>
-
+    
     <nav class="app-header__nav app-header__nav--right" aria-label="Навигация справа">
-      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-4')">Тренера</a>
+      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-3')">Программа</a>
+      <!-- <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-4')">Тренера</a> -->
       <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-5')">Стоимость</a>
       <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-6')">Контакты</a>
     </nav>

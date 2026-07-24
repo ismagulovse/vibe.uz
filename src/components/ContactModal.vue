@@ -33,17 +33,18 @@ const modal = useModalStore()
 
 .modal-window {
   position: relative;
-  background: var(--color-background);
+  background: var(--color-white);
   border-radius: 24px;
   padding: 40px 32px 48px; /* нижний padding увеличен для отступа под кнопкой */
   width: 100%;
   max-width: 520px;
   max-height: 90vh;
   overflow-y: auto;
+
 }
 
 .modal-title {
-  color: var(--color-text);
+  color: var(--color-accent);
   font-weight: 700;
   font-size: 1.4rem;
   text-align: center;

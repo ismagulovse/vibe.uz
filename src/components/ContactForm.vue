@@ -108,15 +108,16 @@ function blockNonDigitKeys(e: KeyboardEvent) {
 .contact-form__field { display: flex; flex-direction: column; gap: 6px; }
 
 .contact-form input {
-  border: 1px solid rgba(58, 73, 104, 0.2);
+  border: 1px solid rgb(13 27 57 / 60%);
   border-radius: 12px;
   padding: 14px 16px;
   font-family: var(--font-main);
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: rgb(29 31 53);
   background: var(--color-white);
   outline: none;
   transition: border-color 0.2s;
+
 }
 
 .contact-form input:focus { border-color: var(--color-sky); }
@@ -124,6 +125,7 @@ function blockNonDigitKeys(e: KeyboardEvent) {
 .contact-form__phone {
   display: flex;
   gap: 8px;
+  
 }
 
 .contact-form__select-wrap {
@@ -159,7 +161,7 @@ function blockNonDigitKeys(e: KeyboardEvent) {
   padding: 14px 32px 14px 16px;
   font-family: var(--font-main);
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: rgb(29 31 53);
   background: var(--color-white);
   outline: none;
   cursor: pointer;

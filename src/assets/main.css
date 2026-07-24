@@ -2,6 +2,7 @@
 @import './base.css';
 
 #app {
+  overflow-y: hidden;
   width: 100%;
 }
 .reveal {

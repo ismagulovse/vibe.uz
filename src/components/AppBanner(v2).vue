@@ -1,5 +1,5 @@
 <template>
-  <section id="section-1" class="hero" :style="heroBgStyle">
+  <section id="section-1" class="hero">
     <div class="hero__overlay" />
 
     <div class="hero__content">
@@ -81,10 +81,10 @@ import { useModalStore } from '@/stores/modal'
 const modal = useModalStore()
 
 // TODO: подставить финальное изображение, когда дизайнер его отдаст
-const bgImage = '/images/tashkent-hero.jpg'
-const heroBgStyle = computed(() => ({
-  backgroundImage: `linear-gradient(90deg, rgba(10,10,12,0.72) 0%, rgba(10,10,12,0.42) 45%, rgba(10,10,12,0.15) 75%), url(${bgImage})`,
-}))
+// const bgImage = '/images/tashkent-hero.jpg'
+// const heroBgStyle = computed(() => ({
+//   backgroundImage: `linear-gradient(90deg, rgba(10,10,12,0.72) 0%, rgba(10,10,12,0.42) 45%, rgba(10,10,12,0.15) 75%), url(${bgImage})`,
+// }))
 
 const tags = ['8 дней', 'Грунтовые корты', 'Профессиональные тренеры', 'Любой уровень игры']
 
@@ -118,17 +118,30 @@ onMounted(() => {
 .hero {
   position: relative;
   display: flex;
-  align-items: center;
-  min-height: 88vh;
-  padding: 60px 24px;
-  margin-bottom: 120px;
-  background-color: var(--color-background);
+  align-items: flex-start;
+  padding-top: 100px;
+  min-height: 10vh;
+  padding: 24px;
+  margin-bottom: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,10,12,0.72) 0%,
+      rgba(10,10,12,0.42) 45%,
+      rgba(10,10,12,0.15) 75%
+    ),
+    url("../assets/desktop.svg");
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   overflow: hidden;
 }
 
 .hero__overlay {
+ 
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -146,6 +159,7 @@ onMounted(() => {
   gap: 20px;
   max-width: 560px;
   text-align: left;
+  padding-left: 50px;
 }
 
 /* --- eyebrow --- */
@@ -350,10 +364,23 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .hero {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10,10,12,0.15) 0%,
+        rgba(10,10,12,0.55) 65%,
+        rgba(10,10,12,0.75) 100%
+      ),
+      url("../assets/mobile.svg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     min-height: 82vh;
     margin-bottom: 60px;
-    padding: 40px 20px;
-    align-items: flex-end;
+    padding: 60px 20px;
+    align-items: flex-start;
   }
 
   .hero__overlay {
@@ -362,7 +389,7 @@ onMounted(() => {
 
   .hero__content {
     max-width: 100%;
-    padding-bottom: 24px;
+    padding-bottom: 0px;
     gap: 16px;
   }
 
@@ -389,4 +416,22 @@ onMounted(() => {
     transform: none;
   }
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(10,10,12,0.72) 0%,
+        rgba(10,10,12,0.42) 45%,
+        rgba(10,10,12,0.15) 75%
+      ),
+      url("../assets/tablet.svg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 </style>
