@@ -2,7 +2,7 @@
   <header class="app-header":class="{ 'app-header--scrolled': isScrolled }">
     <nav class="app-header__nav app-header__nav--left" aria-label="Навигация слева">
       <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-1')">Главная</a>
-      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-2')">Как это было?</a>
+      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-3')">Программа</a>
     </nav>
     
     <div class="app-header__logos">
@@ -12,7 +12,7 @@
     </div>
     
     <nav class="app-header__nav app-header__nav--right" aria-label="Навигация справа">
-      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-3')">Программа</a>
+      <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-2')">Как это было?</a>
       <!-- <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-4')">Тренера</a> -->
       <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-5')">Стоимость</a>
       <a href="#" class="app-header__link" @click.prevent="scrollToSection('section-6')">Контакты</a>

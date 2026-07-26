@@ -86,7 +86,7 @@ const modal = useModalStore()
 //   backgroundImage: `linear-gradient(90deg, rgba(10,10,12,0.72) 0%, rgba(10,10,12,0.42) 45%, rgba(10,10,12,0.15) 75%), url(${bgImage})`,
 // }))
 
-const tags = ['8 дней', 'Грунтовые корты', 'Профессиональные тренеры', 'Любой уровень игры']
+const tags = ['8 дней', 'Грунтовые корты', 'Профессиональные тренеры', 'Любой уровень игры','Прямой перелет с Тюмени']
 
 const titleText = ['Теннисные', 'Каникулы']
 const titleWords = computed(() => {

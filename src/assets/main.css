@@ -1,10 +1,7 @@
 @import './fonts.css';
 @import './base.css';
 
-#app {
-  overflow-y: hidden;
-  width: 100%;
-}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);

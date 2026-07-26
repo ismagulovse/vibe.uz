@@ -8,7 +8,7 @@ const imageModules = import.meta.glob('../assets/images/*.{jpg,JPG,jpeg,png}', {
 const photoSources = Object.values(imageModules) as string[]
 
 // Скорость движения — px/sec, одна на всё
-const PX_PER_SECOND = 30
+const PX_PER_SECOND = 60
 
 interface PhotoMeta {
   src: string

@@ -2,10 +2,12 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ContactForm from '@/components/ContactForm.vue'
 import contactBg from '../assets/Background_image2.jpg'
+import telegramIcon from '@/assets/telegram.svg'
+import maxIcon from '@/assets/max.svg'
 
 const socialLinks = [
-  { name: 'Telegram', href: 'https://t.me/your_channel', icon: 'telegram' },
-  { name: 'Max', href: 'https://max.ru/your_group', icon: 'max' },
+  { name: 'Telegram', href: 'https://t.me/your_channel', icon: telegramIcon },
+  { name: 'Max', href: 'https://max.ru/your_group', icon: maxIcon },
 ]
 
 // --- Появление при скролле ---
@@ -50,7 +52,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
-    
+
     <div class="contact__panel contact__panel--form contact__reveal contact__reveal--3">
       <div class="contact__form-inner">
         <h3 class="contact__form-title">Оставить заявку</h3>
@@ -60,7 +62,8 @@ onBeforeUnmount(() => {
 
         <div class="contact__social">
           <span class="contact__social-label">Наши группы</span>
-          <!-- <div class="contact__social-icons">
+          <div class="contact__social-icons">
+            <a
               v-for="link in socialLinks"
               :key="link.name"
               :href="link.href"
@@ -68,18 +71,9 @@ onBeforeUnmount(() => {
               rel="noopener"
               class="contact__social-link"
             >
-              <span class="contact__social-icon-box">
-                <svg v-if="link.icon === 'telegram'" viewBox="0 0 24 24" fill="none" class="contact__social-svg">
-                  <path d="M21.05 3.5 2.9 10.62c-1.22.5-1.21 1.2-.22 1.5l4.66 1.46 1.8 5.63c.22.6.36.84.75.84.3 0 .43-.14.6-.3l1.7-1.66 3.68 2.72c.68.38 1.16.18 1.33-.63L21.98 4.6c.26-.99-.38-1.44-1.13-1.1Z" fill="currentColor"/>
-                </svg>
-                <svg v-else viewBox="0 0 24 24" fill="none" class="contact__social-svg">
-                  <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M7.5 15.5V8.5l4.5 4 4.5-4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="contact__social-name">{{ link.name }}</span>
+              <img :src="link.icon" :alt="link.name" class="contact__social-svg" />
             </a>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +92,7 @@ onBeforeUnmount(() => {
 .contact__reveal {
   opacity: 0;
   transform: translateY(24px);
-  
+
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
@@ -279,8 +273,8 @@ onBeforeUnmount(() => {
 .contact__social-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 14px 8px 8px;
+  justify-content: center;
+  padding: 8px;
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--color-text-muted) 30%, transparent);
   text-decoration: none;
@@ -293,32 +287,10 @@ onBeforeUnmount(() => {
   transform: translateY(-1px);
 }
 
-.contact__social-icon-box {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  background-color: var(--color-sky);
-  flex-shrink: 0;
-}
-
-.contact__social-link:hover .contact__social-icon-box {
-  background-color: var(--color-accent);
-}
-
 .contact__social-svg {
-  width: 15px;
-  height: 15px;
-}
-
-.contact__social-name {
-  font-family: var(--font-main);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text);
+  height: 24px;
+  width: auto;
+  display: block;
 }
 
 @media (max-width: 900px) {

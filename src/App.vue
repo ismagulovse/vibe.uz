@@ -14,11 +14,11 @@ import ProgramSection from './components/ProgramSection.vue';
 <template>
   <AppHeader />
   <AppBanner />
+  <ProgramSection/>
   <HowItWasSection/>
   <!-- <WhoSection /> -->
   <!-- <AppRoadmap/> -->
   <!-- <ItinerarySection/>  -->
-   <ProgramSection/>
   <!-- <CoachesSection/> -->
   <AppPricing/>
   <ContactModal/>

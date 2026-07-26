@@ -12,19 +12,19 @@ const DEADLINE = '20 августа'
 
 // --- Что входит в стоимость ---
 const includedItems = [
-  { title: 'Проживание', desc: 'Отель Bentley Hotel Tashkent · Двухместный номер' },
+  { title: 'Отель Bently Hotel Tashkent 4 ★', desc: 'Двухместное размещение' },
   { title: 'Питание · полупансион', desc: 'Завтрак и ужин' },
-  { title: 'Трансфер', desc: 'Аэропорт, отель, аэропорт' },
-  { title: 'Тренировки', desc: 'Теннис + Йога' },
+  { title: 'Трансфер', desc: 'Групповой трансфер аэропорт — отель — аэропорт' },
   { title: 'Корты', desc: 'Аренда на весь кэмп' },
-  { title: 'Турнир', desc: 'Международный' },
+  { title: 'Тренировки', desc: 'Теннис + Йога' },
   { title: 'Развлекательная программа', desc: 'Винодельня + Мастер-класс по приготовлению плова' },
+  { title: 'Турнир', desc: 'Международный' },
   { title: 'Два праздничных ужина', desc: 'Welcome-вечер · Финальный ужин' },
 ]
 
 // --- Что оплачивается отдельно ---
 const extraItems = [
-  'Перелёт 45–50 000 ₽',
+  'Авиаперелёт 45–50 000 ₽',
   'Страховка',
   'Личные расходы',
 ]
@@ -75,9 +75,9 @@ onBeforeUnmount(() => {
         <p class="pricing__price-note">
           Экономия {{ SAVE_AMOUNT }} при бронировании до {{ DEADLINE }}, далее — {{ FULL_PRICE }}
         </p>
-        <p class="pricing__price-note pricing__price-note--muted">
+        <!-- <p class="pricing__price-note pricing__price-note--muted">
           Полная программа кэмпа на 8 дней
-        </p>
+        </p> -->
 
         <button class="pricing__cta" type="button" @click="modal.open()">Зафиксировать цену</button>
       </div>
