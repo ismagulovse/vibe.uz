@@ -6,8 +6,8 @@ import telegramIcon from '@/assets/telegram.svg'
 import maxIcon from '@/assets/max.svg'
 
 const socialLinks = [
-  { name: 'Telegram', href: 'https://t.me/your_channel', icon: telegramIcon },
-  { name: 'Max', href: 'https://max.ru/your_group', icon: maxIcon },
+  { name: 'Telegram', href: 'https://t.me/tennisvibetmn', icon: telegramIcon },
+  { name: 'Max', href: 'https://t.me/tennisvibetmn', icon: maxIcon },
 ]
 
 // --- Появление при скролле ---
